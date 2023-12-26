@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: olive;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      #accordion{
+        margin: 100px auto;
+        width: 600%;
+      }
+      #accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+}
+
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+#accordion li label span {
+  transform: rotate(90deg);
+  font-size: 26px;
+  color: dodgerblue;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+    </style>
+</head>
+<body>
+    <ul id="accordion">
+        <li>
+          <label for="first">Tajmahal..</label>
+          <input type="radio" name="accordion" id="first" checked />
+          <div class="content">
+            <p>
+                The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river<br>
+                Yamuna in Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth <br>
+                Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. Wikipedia
+
+            </p>
+          </div>
+        </li>
+        <ul id="accordion">
+            <li>
+              <label for="second">Charminar..<span>&#x3e;</span></label>
+              <input type="radio" name="accordion" id="second" checked />
+              <div class="content">
+                <p>
+                    The Charminar is a monument and mosque in Hyderabad, India. <br>
+                    The structure was built in 1591 AD. It is the most famous building of Hyderabad and also one of the ...
+
+                </p>
+              </div>
+            </li>
+            <ul id="accordion">
+                <li>
+                  <label for="third"> Gate way of india<span>&#x3e;</span></label>
+                  <input type="radio" name="accordion" id="third" checked />
+                  <div class="content">
+                    <p>
+                        The Gateway of India is an arch-monument completed in 1924 <br>
+                         the waterfront of Mumbai, India. It was erected to commemorate<br>
+                          the landing of George V for his coronation as the Emperor of India .
+
+                    </p>
+                  </div>
+                </li>
+              
+      
+</body>
+</html>
